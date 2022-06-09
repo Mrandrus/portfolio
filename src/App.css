@@ -1,38 +1,150 @@
+/* Eliminate global margin and padding defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Navigation Menu Section Styling*/
+#navBar {
+  background-color: #041C32;
+  color: #ECB365;
+  padding: 0px;
+  justify-content: space-between; 
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* .nav {
+  justify-content: space-between;
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .siteLogo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+} */
+
+.navItems {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.navItems ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navItems a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  padding: 0.5rem;
+}
+
+.navItems li:active {
+  text-decoration: underline;
+  background-color: #064663;
+}
+
+.navItems li:hover {
+  background-color: #064663;
+}
+
+
+/* Home and about Section Styling, Project component nested in About component*/
+#aboutPage {
+  background-color: #064663;
+  height: 500px;
+  width: 100%;
+  color: #ECB365;
+  padding: 0px;
+}
+
+.aboutItems {
+  padding: 20px;
+  text-align: center;
+  animation: fadeInAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+      opacity: 1;
   }
 }
+
+/* Projects Section Styling*/
+#projects {
+  background-color: #04293A;
+  color: #ECB365;
+}
+
+.projectItems {
+  padding: 20px;
+}
+
+.projectOne {
+  padding: 20px;
+}
+
+.projectTwo {
+  padding: 20px;
+}
+
+.projectThree {
+  padding: 20px;
+}
+
+/* Experience Section Styling */
+.experiencePage {
+  background-color: #064663;
+  height: 500px;
+  width: 100%;
+  color: #ECB365;
+  padding: 0px;
+}
+
+/* Skills and Skills Canvas Section Styling */
+.skillsPage {
+  background-color: #064663;
+  height: 500px;
+  width: 100%;
+  color: #ECB365;
+  padding: 0px;
+}
+
+.skillsCanvasPage {
+  background-color: #064663;
+  height: 500px;
+  width: 100%;
+  color: #ECB365;
+  padding: 0px;
+}
+
+/* Contact Section Styling */
+.contactPage {
+  background-color: #064663;
+  height: 500px;
+  width: 100%;
+  color: #ECB365;
+  padding: 0px;
+}
+
+/* Resume Section Styling */
+
+
+

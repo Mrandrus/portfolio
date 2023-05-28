@@ -6,31 +6,39 @@ import Navbar from "./Components/Navbar";
 import Skills from "./Components/Skills";
 import Footer from "./Components/Footer";
 import Experience from "./Components/Experience";
+import Projects from "./Components/Projects";
+import Hobbies from "./Components/Hobbies";
 //import { Component } from "react/cjs/react.production.min";
+import { BrowserRouter } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+import $ from "jquery"
+import Stars from "./Components/Stars";
+import MouseTrail from "./Components/MouseTrail";
 
 function App() {
   let component;
   let array = [4, 6, 34, 56, 59, 89, 6, 9];
-  switch (window.location.pathname) {
-    case "/":
-      component = <About />;
-      break;
-    case "/Contact":
-      component = <Contact />;
-      break;
-    case "/Skills":
-      component = <Skills />;
-      break;
-    case "/About":
-      component = <About />;
-      break;
-    case "/Experience":
-      component = <Experience />
-      break;
-    default:
-      component = App;
-    break;
-  }
+  // switch (window.location.pathname) {
+  //   switch (document.querySelector(component)) {
+  //   case "/":
+  //     component = <About />;
+  //     break;
+  //   case "/Contact":
+  //     component = <Contact />;
+  //     break;
+  //   case "/Skills":
+  //     component = <Skills />;
+  //     break;
+  //   case "/About":
+  //     component = <About />;
+  //     break;
+  //   case "/Experience":
+  //     component = <Experience />
+  //     break;
+  //   default:
+  //     component = App;
+  //   break;
+  // }
 
   let banana = (inHere) => {
     let p = 0;
@@ -42,14 +50,17 @@ function App() {
 
   let c = banana(array);
 
+
   return (
     <main>
-      <Navbar />
-      {component}
-      {/* <About /> */}
-      {c}
-      <br />
-      {array}
+      <Stars />
+      <MouseTrail />
+      <About /> 
+      <Experience />      
+      <Skills />
+      <Projects />
+      <Hobbies />
+      <Contact />
       <Footer />
     </main>
   );

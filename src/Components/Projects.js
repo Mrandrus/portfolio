@@ -1,10 +1,17 @@
 import React from "react";
-import '../App.css';
+import "../App.css";
 
 export default function Projects() {
-    return (
-      <section id="projects">
-        <div className="projectItems">
+  return (
+    <div className="projects" id="projects">
+      <div className="projects-heading">
+        <h2>Here are some of my projects</h2>
+      </div>
+      <div className="project-coming-soon">
+        <marquee>Coming Soon</marquee>
+      </div>
+      {/* <div className="projectItems">
+        <div className="projectCard">
           <div className="projectOne">
             <h1>Colorado Food Reviews</h1>
             <p>
@@ -12,15 +19,23 @@ export default function Projects() {
               Northern Front Range.
             </p>
           </div>
+        </div>
+        <div className="projectCard">
           <div className="projectTwo">
             <h1>Movie Game</h1>
-            <p>A web application that uses the internet movie database api that tests your movie knowledge.</p>
+            <p>
+              A web application that uses the internet movie database api that
+              tests your movie knowledge.
+            </p>
           </div>
+        </div>
+        <div className="projectCard">
           <div className="projectThree">
             <h1>I'm Matt</h1>
             <p>I work in web development</p>
           </div>
         </div>
-      </section>
-    );
+      </div> */}
+    </div>
+  );
 }

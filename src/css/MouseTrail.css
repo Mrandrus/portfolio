@@ -1,0 +1,12 @@
+.mouseTrail {
+    position: absolute;
+    height: 25px; 
+    width: 15px;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0px 0px 10px 1px aqua;
+    z-index: 0;
+    overflow:hidden;
+}
+
+

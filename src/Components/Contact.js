@@ -1,10 +1,25 @@
-
+import '../App.css'
+import  resume from '../media/AndrusResume2022.pdf'
 
 export default function Contact() {
     return (
-        <div className="contactPage">
-            <p>Hello these are my contact details</p>
-
+        <div className="contactPage" id="contact">
+            <div className='contact-card-container'>
+                <h3>Action Card</h3>
+                <p>Play to view Resume</p>
+                <form method="get" action={resume}>
+                    <button className="contact-download-resume-button" type="submit">Click to View Resume</button>
+                </form>
+            </div>
+            {/* <div className='contact-message'>
+                <h3>Send me a message</h3>
+                <form>
+                    <input>
+                    
+                    </input>
+                </form>
+                <button>send</button>
+            </div> */}
         </div>
     );
 }

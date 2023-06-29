@@ -1,7 +1,7 @@
 import "../App.css";
 import $ from "jquery";
 import "../css/MouseTrail.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 
 const MouseTrail = () => {
   // dots is an array of Dot objects,
@@ -114,3 +114,4 @@ const MouseTrail = () => {
   animate();
 };
 export default MouseTrail;
+

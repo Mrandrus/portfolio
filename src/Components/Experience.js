@@ -22,9 +22,16 @@ export default function Experience() {
               </div>
             </div>
           </div>
-          <img className="csuImage" src={csu}></img>
+          <div className="csuImage-section">
+            <img className="csuImage" src={csu}></img>
+          </div>
           <div className="csuLocation-card-lowerContent">
-            <p>Shit man I don't know, this is just where I worked and shit.</p>
+            <p>
+              Established in 1870, Colorado State University (CSU) is a public
+              research university in Fort Collins, Colorado, known for its
+              diverse academic programs, strong research focus, and commitment
+              to sustainability.
+            </p>
           </div>
         </div>
       </div>

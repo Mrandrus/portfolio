@@ -129,7 +129,9 @@ body {
   order: 1;
   text-align: center;
   align-self: center;
+  z-index: 1;
 }
+
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
@@ -155,8 +157,8 @@ body {
 .aboutPicBorder {
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
-  height: 525px;
-  width: 375px;
+  height: 32.813rem;
+  width: 23.438rem;
   border: #064663;
   border-radius: 25px;
   text-align: center;
@@ -166,6 +168,9 @@ body {
   flex-direction: column;
   z-index: 1;
   transition: 1s ease-in-out;
+  animation: fadeInAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .aboutPicUpper {
@@ -173,7 +178,7 @@ body {
   border-radius: 25px;
   text-align: center;
   align-self: center;
-  height: 55%;
+  height: 65%;
 }
 
 .aboutPicUpper_sectionOne {
@@ -201,23 +206,31 @@ body {
 }
 
 .aboutPicUpper_sectionTwo {
-  height: 25%;
+  height: 20%;
 }
 
 .aboutPicUpper_sectionThree {
-  height: 65%;
+  display: flex;
+  height: 60%;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background-color: black;
+  border-radius: 25px;
 }
 
-.aboutPicUpper img {
-  width: 100%;
-  height: 80%;
+.aboutPicUpper_sectionThree img {
+  width: 95%;
+  height: 95%;
   object-fit: cover;
+  justify-content: center;
+  align-self: center;
   object-position: 15% 10%;
   border-radius: 15px;
 }
 
 .aboutPicLower {
-  height: 35%;
+  height: 30%;
   width: 90%;
   border-radius: 25px;
   text-align: center;
@@ -229,7 +242,7 @@ body {
   flex-direction: row;
   width: 100%;
   gap: 15px;
-  height: 10%;
+  height: 20%;
 }
 
 .aboutPicLower_sectionOne_One {
@@ -239,6 +252,7 @@ body {
   border-radius: 15px;
   justify-content: center;
   align-self: center;
+  margin-top: 0px;
 }
 
 .aboutPicLower_sectionOne_Two {
@@ -253,7 +267,7 @@ body {
 .aboutPicLower_sectionTwo {
   width: 100%;
   border-radius: 25px;
-  height: 65%;
+  height: 45%;
   display: flex;
 }
 
@@ -392,8 +406,8 @@ body {
 .projectCard {
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
-  height: 525px;
-  width: 375px;
+  height: 32.813rem;
+  width: 23.438rem;
   border: #064663;
   border-radius: 25px;
   text-align: center;
@@ -401,7 +415,7 @@ body {
   align-self: center;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 2;
   transition: 1s ease-in-out;
 }
 
@@ -410,9 +424,9 @@ body {
   z-index: 3;
 }
 
-.projectCard:hover {
+/* .projectCard:hover {
   box-shadow: 0px 0px 50px 7px #ffffff;
-}
+} */
 
 .projectItems {
   padding: 20px;
@@ -460,7 +474,8 @@ body {
 .csuLocation-card {
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  height: 375px;
-  width: 525px;
+  width: 32.813rem;
+  height: 23.438rem;
   border: #064663;
   border-radius: 25px;
   text-align: center;
@@ -505,6 +520,12 @@ body {
   display: flex;
 }
 
+.csuLocation-card-lowerContent {
+  font-size: 12px;
+  width: 95%;
+  align-self: center;
+}
+
 .csuLocation-card-upperContent-three-inner-container-one h4 {
   border-radius: 75px;
   display: flex;
@@ -518,14 +539,12 @@ body {
 
  .csuLocation-card-upperContent-three-inner-container-three h4 {
   border-radius: 75px;
-  background-color: #064663;
   display: flex;
   height: 30%;
   width: 30%;
   justify-content: center;
   align-self: center;
   text-align: center;
-  padding: 5px;
  }
 
 .csuLocation-card:hover {
@@ -540,9 +559,18 @@ body {
   padding: 20px;
 }
 
+.csuImage-section {
+  width: 90%;
+  padding: 5px;
+  border-radius: 25px;
+  align-self: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  height: 375px;
+}
+
 .csuImage {
-  height: 300px;
-  width: 450px;
+  height: 12.5rem;
+  width: 25rem;
   align-self: center;
   justify-content: center;
   border-radius: 25px;
@@ -552,6 +580,7 @@ body {
   order: 2;
   text-align: center;
   align-self: center;
+  z-index: 1;
 }
 
 .experienceText {
@@ -575,7 +604,7 @@ body {
 .skills-header {
   text-align: center;
   width: 100%;
-  height: 10%;
+  height: 15%;
   justify-content: center;
   align-items: center;
 }
@@ -583,9 +612,10 @@ body {
 .skills-content {
   display: flex;
   flex-direction: row;
-  height: 70%;
+  height: 75%;
   width: 100%;
   justify-content: center;
+  align-self: center;
 }
 
 
@@ -608,7 +638,21 @@ body {
   justify-content: center;
 } 
 
+.slide-arrow-non {
+  display: none;
+}
+
 .skillCard:hover {
+  box-shadow: 0px 0px 50px 7px #ffffff;
+  transition: 1s;
+}
+
+.skillCard-post:hover {
+  box-shadow: 0px 0px 50px 7px #ffffff;
+  transition: 1s;
+}
+
+.skillCard-pre:hover {
   box-shadow: 0px 0px 50px 7px #ffffff;
   transition: 1s;
 }
@@ -625,7 +669,6 @@ body {
 }
 
 .skillCards {
-  gap: 15px;
   text-align: center;
   align-self: center;
   justify-content: center;
@@ -633,15 +676,16 @@ body {
   display: flex; 
   flex-direction: row; 
   color:#FFE81F;
-  order: 2;
+  order: 3;
   height: 100%;
+  gap: 15px;
 }
 
 .skillCard {
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
-  height: 525px;
-  width: 375px;
+  height: 32.813rem;
+  width: 23.438rem;
   border: #064663;
   border-radius: 25px;
   text-align: center;
@@ -654,11 +698,41 @@ body {
   order: 2;
 }
 
+.skillCard-deck-left {
+  display: flex;
+  flex-direction: row;
+  height: 16.407rem;
+  width: 11.719rem;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(6, 70, 99, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  border-radius: 25px;
+  border-left: 1px solid #fff;
+  z-index: 1;
+  justify-content: center;
+  align-self: center;
+
+}
+
+.skillCard-deck-right {
+  display: flex;
+  flex-direction: row;
+  height: 16.407rem;
+  width: 11.719rem;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(6, 70, 99, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  border-radius: 25px;
+  border-right: 1px solid #fff;
+  z-index: 1;
+  order: 5;
+  justify-content: center;
+  align-self: center;
+}
+
 .deck-right {
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
-  height: 325px;
-  width: 175px;
+  height: 16.407rem;
+  width: 11.719rem;
   border: #064663;
   border-right: 1px solid #fff;
   border-radius: 25px;
@@ -667,7 +741,52 @@ body {
   align-self: center;
   display: flex;
   flex-direction: row;
+  position: static;
   z-index: 2;
+  order: 3;
+}
+
+.deck-left {
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
+  height: 16.407rem;
+  width: 11.719rem;
+  border: #064663;
+  border-left: 1px solid #fff;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+  order: 2;
+}
+
+.deck-left-container {
+  height: 100%;
+  /* display: flex;
+  flex-direction: row; */
+  align-self: center;
+  justify-content: center;
+  order: 1;
+}
+
+.deck-right-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  order: 5;
+}
+
+.deck-left-non {
+  display: none;
+}
+
+.deck-right-non {
+  display: none;
 }
 
 .skillCard[moveLeft='1'] {
@@ -693,34 +812,34 @@ body {
 .skillCard-pre {
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
-  height: 325px;
-  width: 175px;
+  height: 16.407rem;
+  width: 11.719rem;
   border: #064663;
   border-radius: 25px;
   text-align: center;
   justify-content: center;
   align-self: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   z-index: 3;
   transition: 1s ease-in-out;
-  order: 1;
+  order: 2;
 }
 
 .skillCard-post {
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
-  height: 325px;
-  width: 175px;
+  height: 16.407rem;
+  width: 11.719rem;
   border: #064663;
   border-radius: 25px;
   text-align: center;
   justify-content: center;
   align-self: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   z-index: 3;
-  order: 3;
+  order: 4;
   transition: 1s ease-in-out;
 }
 
@@ -761,7 +880,7 @@ body {
 
 .slider-button-right {
   display: flex;
-  order: 3;
+  order: 4;
   height: 100%;
   z-index: 2;
 }
@@ -779,8 +898,7 @@ body {
   color:#FFE81F;
 }
 
-.hobbiesCards {
-  gap: 15px;
+.hobbiesCards-container {
   text-align: center;
   align-self: center;
   justify-content: center;
@@ -791,11 +909,24 @@ body {
   height: 100%;
 }
 
+.hobbiesCards {
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  z-index: 1;
+  display: flex; 
+  flex-direction: row; 
+  color:#FFE81F;
+  order: 3;
+  height: 100%;
+  gap: 15px;
+}
+
 .hobbiesCard {
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
-  height: 525px;
-  width: 375px;
+  height: 32.813rem;
+  width: 23.438rem;
   border: #064663;
   border-radius: 25px;
   text-align: center;
@@ -806,6 +937,182 @@ body {
   z-index: 3;
   transition: 1s ease-in-out;
   order: 2;
+}
+
+.hobbiesCard:hover {
+  box-shadow: 0px 0px 50px 7px #ffffff;
+  transition: 1s;
+}
+
+.hobbiesCard-border {
+  height: 100%;
+  border-radius: 25px;
+}
+
+.hobbiesCard-upper {
+  height: 80%;
+  align-self: center;
+  justify-content: center;
+}
+
+.hobbiesCard-upper-sectionOne {
+  height: 10%;
+}
+
+.hobbiesCard-upper-sectionTwo {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+}
+
+.hobbiesCard-upper-sectionTwo img {
+  width: 90%;
+  height: 95%;
+  object-fit: cover;
+  justify-content: center;
+  align-self: center;
+  object-position: 15% 10%;
+  border-radius: 15px;
+}
+
+.hobbiesCard-bottom {
+  height: 20%;
+  justify-content: center;
+  align-self: center;
+}
+
+.hobbiesCard-left {
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
+  height: 16.407rem;
+  width: 11.719rem;
+  border: #064663;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  transition: 1s ease-in-out;
+  order: 2;
+}
+
+.hobbiesCard-left:hover {
+  box-shadow: 0px 0px 50px 7px #ffffff;
+  transition: 1s;
+}
+
+.hobbiesCard-left-border {
+  height: 100%;
+  border-radius: 25px;
+}
+
+.hobbiesCard-left-upper {
+  height: 80%;
+  align-self: center;
+  justify-content: center;
+}
+
+.hobbiesCard-left-upper-sectionOne {
+  font-size: .6rem;
+  height: 10%;
+}
+
+.hobbiesCard-left-upper-sectionTwo {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+}
+
+.hobbiesCard-left-upper-sectionTwo img {
+  width: 90%;
+  height: 95%;
+  object-fit: cover;
+  justify-content: center;
+  align-self: center;
+  object-position: 15% 10%;
+  border-radius: 15px;
+}
+
+.hobbiesCard-left-bottom {
+  height: 20%;
+  font-size: .5rem;
+  justify-content: center;
+  align-self: center;
+}
+
+.hobbiesCard-right {
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
+  height: 16.407rem;
+  width: 11.719rem;
+  border: #064663;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  transition: 1s ease-in-out;
+  order: 2;
+}
+
+.hobbiesCard-right:hover {
+  box-shadow: 0px 0px 50px 7px #ffffff;
+  transition: 1s;
+}
+
+.hobbiesCard-right-border {
+  height: 100%;
+  border-radius: 25px;
+}
+
+.hobbiesCard-right-upper {
+  height: 80%;
+  align-self: center;
+  justify-content: center;
+}
+
+.hobbiesCard-right-upper-sectionOne {
+  height: 10%;
+  font-size: .6rem;
+}
+
+.hobbiesCard-right-upper-sectionTwo {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+}
+
+.hobbiesCard-right-upper-sectionTwo img {
+  width: 90%;
+  height: 95%;
+  object-fit: cover;
+  justify-content: center;
+  align-self: center;
+  object-position: 15% 10%;
+  border-radius: 15px;
+}
+
+.hobbiesCard-right-bottom {
+  height: 20%;
+  font-size: .5rem;
+  justify-content: center;
+  align-self: center;
 }
 
 /* Contact Section Styling */
@@ -825,8 +1132,8 @@ body {
 .contact-card-container {
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
-  height: 525px;
-  width: 375px;
+  height: 32.813rem;
+  width: 23.438rem;
   border: #064663;
   border-radius: 25px;
   text-align: center;
@@ -850,8 +1157,86 @@ body {
   background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
 }
 
+/*footer yo*/
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);
+  color: #FFE81F;
+  font-size: 20px;
+  z-index: 2;
+}
 
-/* Resume Section Styling */
+.footer-items-left {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  color:#FFE81F;
+  z-index: 2;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
 
+.footer-items-left a {
+  color:#FFE81F;
+  text-decoration: none;
+}
+
+.footer-items-right {
+  order: 2;
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+}
+
+
+/* ------------------Responsive------------------ */
+
+@media only screen and (max-width: 950px) {
+  .mouseTrail {
+    display: none;
+    visibility: hidden;
+  }
+
+  .parentAbout {
+    flex-direction: column;
+  }
+
+  .experiencePage {
+    flex-direction: column;
+  }
+
+  .skillCard-post {
+    display: none;
+  }
+
+  .skillCard-pre {
+    display: none;
+  }
+
+  .hobbiesCard-left {
+    display: none;
+  }
+
+  .hobbiesCard-right {
+    display: none;
+  }
+
+  .footer-items-left {
+    flex-direction: column;
+    height: 100vh;
+    gap: .5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: 100vh;
+  }
+}
 
 

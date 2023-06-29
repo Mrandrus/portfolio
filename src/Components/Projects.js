@@ -7,35 +7,34 @@ export default function Projects() {
       <div className="projects-heading">
         <h2>Here are some of my projects</h2>
       </div>
-      <div className="project-coming-soon">
+      {/* <div className="project-coming-soon">
         <marquee>Coming Soon</marquee>
-      </div>
-      {/* <div className="projectItems">
-        <div className="projectCard">
-          <div className="projectOne">
-            <h1>Colorado Food Reviews</h1>
-            <p>
-              This particular website explores the best food spots in the
-              Northern Front Range.
-            </p>
-          </div>
-        </div>
-        <div className="projectCard">
-          <div className="projectTwo">
-            <h1>Movie Game</h1>
-            <p>
-              A web application that uses the internet movie database api that
-              tests your movie knowledge.
-            </p>
-          </div>
-        </div>
-        <div className="projectCard">
-          <div className="projectThree">
-            <h1>I'm Matt</h1>
-            <p>I work in web development</p>
-          </div>
-        </div>
       </div> */}
+              <marquee>
+
+      <div className="projectItems">
+          <div className="projectCard">
+            <div className="projectOne">
+              <h1>Colorado Nom-Noms</h1>
+              <p>Coming soon!</p>
+            </div>
+          </div>
+
+          <div className="projectCard">
+            <div className="projectTwo">
+              <h1>Movie Trivia Game</h1>
+              <p>Coming soon!</p>
+            </div>
+          </div>
+          <div className="projectCard">
+            <div className="projectThree">
+              <h1>Music Landing Page</h1>
+              <p>Coming soon!</p>
+            </div>
+          </div>
+      </div>
+      </marquee>
+
     </div>
   );
 }

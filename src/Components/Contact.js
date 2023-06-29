@@ -1,5 +1,5 @@
 import '../App.css'
-import  resume from '../media/AndrusResume2022.pdf'
+import  resume from '../media/AndrusResume2023.pdf'
 
 export default function Contact() {
     return (

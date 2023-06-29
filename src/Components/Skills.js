@@ -1,6 +1,5 @@
 import $ from "jquery";
 import { useEffect, useState } from "react";
-import SkillsSlider from "./SkillsSlider";
 //import "../css/SkillsSlider.css";
 
 const extraContent = (
@@ -110,37 +109,113 @@ export default function Skills() {
   const [rightSlide, setRightSlide] = useState(1);
   const [moveLeft, setMoveLeft] = useState(0);
   const [moveRight, setMoveRight] = useState(0);
-  const [deckLeft, setDeckLeft] = useState([]);
-  const [deckRight, setDeckRight] = useState([]);
+  const [deckLeftCount, setdeckLeftCount] = useState(0);
+  const [deckRightCount, setdeckRightCount] = useState(slides.length - 2);
+  // const [deckLeft, setDeckLeft] = useState([0]);
+  // const [deckRight, setDeckRight] = useState([slides]);
 
   useEffect(() => {
-    setDeckRight(slides)
+    // setdeckRightCount(slides)
   }, []);
 
   const traverseRight = () => {
     if (currentSlide >= slides.length - 1 || rightSlide >= slides.length - 1) {
       setCurrentSlide(slides.length - 1);
-      setLeftSlide(slides.length - 1);
-      setRightSlide(slides.length - 2);
+      setLeftSlide(slides.length - 2);
+      setRightSlide(slides.length - 1);
+      //setdeckLeftCount([0])
     } else {
       setCurrentSlide(currentSlide + 1);
-      setLeftSlide(leftSlide + 1);
       setRightSlide(rightSlide + 1);
+      if (leftSlide <= slides.length - 1 && currentSlide >= 1) {
+        setLeftSlide(leftSlide + 1);
+      }
+      //console.log("left deck number", deckLeftCount)
     }
   };
 
   const traverseLeft = () => {
-    if (currentSlide <= 0 || leftSlide <= 0) {
+    //let updateSlides = deckRightCount
+
+    if (currentSlide <= 0) {
       setCurrentSlide(0);
       setLeftSlide(0);
       setRightSlide(1);
     } else {
       setCurrentSlide(currentSlide - 1);
-      setLeftSlide(leftSlide - 1);
-      setRightSlide(rightSlide - 1);
-      setDeckRight(deckRight.slice())
+      if (leftSlide > 0) {
+        setLeftSlide(leftSlide - 1);
+      }
+      if (currentSlide < slides.length - 1) {
+        setRightSlide(rightSlide - 1);
+      }
+      // if (leftSlide >= slides.length - 2) {
+      //   setLeftSlide(slides.length - 2)
+      // }
     }
     //console.log(currentSlide)
+  };
+
+  const handleSwipe = (direction) => {
+    if (direction === "left") {
+      if (deckRightCount <= slides.length - 1 && deckLeftCount >= 1) {
+        setdeckRightCount(deckRightCount + 1);
+        setdeckLeftCount(deckLeftCount - 1);
+        console.log(deckLeftCount, "Left and Right decks", deckRightCount);
+      }
+    } else if (direction === "right") {
+      if (deckRightCount >= 1 && deckLeftCount <= slides.length - 1) {
+        setdeckRightCount(deckRightCount - 1);
+        setdeckLeftCount(deckLeftCount + 1);
+        console.log(deckLeftCount, "Left and Right decks", deckRightCount);
+      }
+    }
+  };
+
+  const renderCards = (count, direction) => {
+    const cards = [];
+    for (let i = 0; i < count - 1; i++) {
+      if (direction === "left") {
+        cards.push(
+          <div className="skillCard-deck-left" key={i}>
+            {/* {i} */}
+          </div>
+        );
+      } else if (direction === "right") {
+        cards.push(
+          <div className="skillCard-deck-right" key={i}>
+            {/* {i} */}
+          </div>
+        );
+      }
+    }
+    return cards;
+  };
+
+  const calculateCardStyle = (count) => {
+    const scale = Math.max(1 - count * 0.1, 0.5);
+    const translateY = -10 * count;
+    return {
+      //transform: `scale(${scale}) translateY(${translateY}px)`,
+      //marginRight: `scale(${scale})`,
+
+      display: "flex",
+      //width: "25px",
+      height: "100%",
+      background: "none",
+      // background:
+      //   "radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%)",
+      // borderRadius: "25px",
+      // borderLeft: `1px solid #fff`,
+      zIndex: "1",
+      justifyContent: "center",
+      alignSelf: "center",
+      gap: "0",
+    };
+  };
+
+  const animator = () => {
+    //do stuff here
   };
 
   if (!Array.isArray(slides) || slides.length <= 0) {
@@ -153,14 +228,20 @@ export default function Skills() {
         <h2>Here are some of my skill cards</h2>
       </div>
       <div className="skills-content">
-        <div className="slider-button-left">
+        <div
+          className={
+            currentSlide > 0 ? "slider-button-left" : "slide-arrow-non"
+          }
+        >
           <button
             className="slide-arrow"
             id="slide-arrow-prev"
             onClick={() => {
               traverseLeft();
-              setMoveLeft(1);
+              //animator();
+              handleSwipe("left");
             }}
+            
             onAnimationEnd={() => setMoveLeft(0)}
             move={moveLeft}
           >
@@ -168,30 +249,70 @@ export default function Skills() {
           </button>
         </div>
         <div className="skillCards">
-          <div className="skillCard-pre">
+          {/* {deckLeftCount >= 1 && (
+            <div
+              className={
+                deckLeftCount > 1 && deckLeftCount < slides.length - 1
+                  ? "skillCard-deck-left"
+                  : "deck-left-non"
+              }
+            >
+              {renderCards(deckLeftCount, "left")}
+            </div>
+          )} */}
+          <div
+            className={
+              currentSlide >= 1 ? "skillCard-pre" : "skillCard-pre-non"
+            }
+            onClick={() => {
+              traverseLeft();
+              handleSwipe("left");
+            }}
+          >
             <h6>{slides[leftSlide].value}</h6>
           </div>
           <div className="skillCard">
             <h4>{slides[currentSlide].value}</h4>
           </div>
-          <div className="skillCard-post">
+          <div
+            className={
+              currentSlide != slides.length - 1
+                ? "skillCard-post"
+                : "skillCard-post-non"
+            }
+            onClick={() => {
+              traverseRight();
+              handleSwipe("right");
+            }}
+          >
             <h6>{slides[rightSlide].value}</h6>
           </div>
-        </div>
-        {deckRight.map((i, j) => {
-          return (
+          {/* {deckRightCount > 1 && (
             <div
-              key={j}
-              className="deck-right"
-              style={{ marginLeft: 5 + i }}
-            ></div>
-          );
-        })}
-        <div className="slider-button-right">
+              className={
+                deckRightCount < slides.length - 1 && deckRightCount > 1
+                  ? "skillCard-deck-right"
+                  : "deck-right-non"
+              }
+            >
+              {renderCards(deckRightCount, "right")}
+            </div>
+          )} */}
+        </div>
+        <div
+          className={
+            currentSlide < slides.length - 1
+              ? "slider-button-right"
+              : "slide-arrow-non"
+          }
+        >
           <button
             className="slide-arrow"
             id="slide-arrow-next"
-            onClick={traverseRight}
+            onClick={() => {
+              traverseRight();
+              handleSwipe("right");
+            }}
           >
             &#8250;
           </button>

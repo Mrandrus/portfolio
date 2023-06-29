@@ -14,6 +14,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import $ from "jquery"
 import Stars from "./Components/Stars";
 import MouseTrail from "./Components/MouseTrail";
+import Swiping from "./Components/Swiping";
 
 function App() {
   let component;
@@ -53,6 +54,7 @@ function App() {
 
   return (
     <main>
+      {/* <Swiping /> */}
       <Stars />
       <MouseTrail />
       <About /> 

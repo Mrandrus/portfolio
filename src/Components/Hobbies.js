@@ -4,7 +4,14 @@ import csu from "../media/csu_sign.jpg";
 import chef from "../media/matt_chef.jpg";
 import music from "../media/matt_music_slerp.jpg";
 import sport from "../media/matt_sports.jpg";
-import gamer from "../media/gamer_pic.jpg";
+import gamer from "../media/Matt_Gamer.jpg";
+import gardener from "../media/matt_gardener.jpg";
+import lit from "../media/matt_literature.jpg";
+import amazon from "../media/amazon_matt.jpg";
+
+
+
+
 
 const Hobbies = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,7 +48,19 @@ const Hobbies = () => {
       id: 5,
       title: "Budding Gardener",
       description: "I'm new to gardening but it runs deep in my veins with my family history.",
-      pic: gamer,
+      pic: gardener,
+    },
+    {
+      id: 6,
+      title: "Literature",
+      description: "I've found a passion for classic literature and history.",
+      pic: lit,
+    },
+    {
+      id: 7,
+      title: "Amazon Driver",
+      description: "This is what I do now.",
+      pic: amazon,
     },
   ];
 

@@ -2,7 +2,7 @@ import React from "react";
 import Projects from "./Projects";
 import Character from "./Character";
 import mockPic from "../media/before.PNG";
-import pic from "../media/gamer_pic.jpg";
+import pic from "../media/matt_main - Copy (2).jpg";
 import "../App.css";
 import "../About.css";
 import $ from "jquery";

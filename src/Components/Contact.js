@@ -6,7 +6,10 @@ export default function Contact() {
         <div className="contactPage" id="contact">
             <div className='contact-card-container'>
                 <h3>Action Card</h3>
+                <hr className='card-divider' />
                 <p>Play to view Resume</p>
+                <br />
+                <br />
                 <form method="get" action={resume}>
                     <button className="contact-download-resume-button" type="submit">Click to View Resume</button>
                 </form>

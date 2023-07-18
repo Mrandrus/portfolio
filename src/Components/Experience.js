@@ -23,7 +23,9 @@ export default function Experience() {
             </div>
           </div>
           <div className="csuImage-section">
-            <img className="csuImage" src={csu}></img>
+            <div className="csuImage-section-border">
+              <img className="csuImage" src={csu}></img>
+            </div>
           </div>
           <div className="csuLocation-card-lowerContent">
             <p>

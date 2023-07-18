@@ -6,7 +6,7 @@ import MouseTrail from "./MouseTrail";
 const Starrrs = () => {
     class Star {
         constructor(className) {
-          this.size = Math.floor(Math.random() * 1) + 3;
+          this.size = Math.floor(Math.random() * 3) + 2;
           this.top = Math.random() * window.innerHeight + 'px';
           this.left = Math.random() * window.innerWidth + 'px';
           this.className = className;

@@ -133,7 +133,7 @@ body {
   color: #FFE81F;
   padding: 0px;
   flex-direction: row;
-  align-items: stretch;
+  /* align-items: stretch; */
   display: flex;
 }
 
@@ -148,7 +148,9 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   order: 1;
+  display: flex;
   text-align: center;
+  justify-content: center;
   align-self: center;
   z-index: 1;
 }
@@ -215,7 +217,6 @@ body {
   border-radius: 15px;
   text-align: left;
   align-self: center;
-  border: 5px;
 }
 
 .aboutPicUpper_sectionOne_Two {
@@ -268,21 +269,22 @@ body {
 
 .aboutPicLower_sectionOne_One {
   order: 1;
-  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
+  background: #000000;  
   width: 50%;
   border-radius: 15px;
   justify-content: center;
   align-self: center;
-  margin-top: 0px;
+  padding: 5px;
 }
 
 .aboutPicLower_sectionOne_Two {
   order: 2;
-  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
+  background: #000000;  
   width: 50%;
   border-radius: 15px;
   justify-content: center;
   align-self: center;
+  padding: 5px;
 }
 
 .aboutPicLower_sectionTwo {
@@ -511,6 +513,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 10%;
   text-align: center;
   justify-content: center;
 }
@@ -543,6 +546,7 @@ body {
 .csuLocation-card-lowerContent {
   font-size: 12px;
   width: 95%;
+  height: 10%;
   align-self: center;
 }
 
@@ -581,11 +585,21 @@ body {
 
 .csuImage-section {
   width: 90%;
+  height: 65%;
   padding: 5px;
   border-radius: 25px;
   align-self: center;
   justify-content: center;
-  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  height: 375px;
+  display: flex;
+}
+
+.csuImage-section-border {
+  background-color: #000000;
+  border-radius: 25px;
+  padding: 5px;
+  justify-content: center;
+  align-self: center;
+  display: flex;
 }
 
 .csuImage {
@@ -1352,6 +1366,14 @@ body {
     .csuLocation-card {
       width: 24.61rem;
       height: 17.58rem;
+    }
+
+    .csuLocation-card-upperContent {
+      font-size: small;
+    }
+
+    .aboutPicture {
+      font-size: small;
     }
   }
 

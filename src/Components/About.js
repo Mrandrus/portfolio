@@ -71,7 +71,6 @@ export default function About() {
               <button onClick={shitOn}>Click this</button>
               <p id="shit"></p> */}
           </div>
-          <br />
           <div className="aboutPicLower">
             <div className="aboutPicLower_sectionOne">
               <div className="aboutPicLower_sectionOne_One">
@@ -81,7 +80,6 @@ export default function About() {
                 <p>Experience 6</p>
               </div>
             </div>
-            <br />
             <div className="aboutPicLower_sectionTwo">
               <div className="aboutPicLower_sectionTwo_One">
                 <p>

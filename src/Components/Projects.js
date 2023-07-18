@@ -15,20 +15,20 @@ export default function Projects() {
       <div className="projectItems">
           <div className="projectCard">
             <div className="projectOne">
-              <h1>Colorado Nom-Noms</h1>
+              <h3>Colorado Nom-Noms</h3>
               <p>Coming soon!</p>
             </div>
           </div>
 
           <div className="projectCard">
             <div className="projectTwo">
-              <h1>Movie Trivia Game</h1>
+              <h3>Movie Trivia Game</h3>
               <p>Coming soon!</p>
             </div>
           </div>
           <div className="projectCard">
             <div className="projectThree">
-              <h1>Music Landing Page</h1>
+              <h3>Music Landing Page</h3>
               <p>Coming soon!</p>
             </div>
           </div>

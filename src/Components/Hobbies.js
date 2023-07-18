@@ -23,7 +23,7 @@ const Hobbies = () => {
     {
       id: 1,
       title: "Aged Intramural Athlete",
-      description: "Though a shadow of my formal self, there a still remnants of athleticism.",
+      description: "Though a shadow of my formal self, there is still remnants of athleticism.",
       pic: sport,
     },
     {
@@ -41,19 +41,19 @@ const Hobbies = () => {
     {
       id: 4,
       title: "Unkempt gamer and Cinephile",
-      description: "When I'm not rewatching The Lord of the Rings and Tarantino movies, I'm smith knives in Skyrim.",
+      description: "When I'm not rewatching The Lord of the Rings or Tarantino movies, I'm smithing knives in Skyrim.",
       pic: gamer,
     },
     {
       id: 5,
       title: "Budding Gardener",
-      description: "I'm new to gardening, but it runs deep in my veins with a long line of gardeners in my family tree.",
+      description: "I'm new to gardening, but my family tree is full of assiduous gardeners.",
       pic: gardener,
     },
     {
       id: 6,
       title: "Literature",
-      description: "I've found a more recent passion for classic literature and history.",
+      description: "I've found an enjoyment for classic literature and history.",
       pic: lit,
     },
     {

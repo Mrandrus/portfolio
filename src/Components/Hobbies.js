@@ -23,37 +23,37 @@ const Hobbies = () => {
     {
       id: 1,
       title: "Aged Intramural Athlete",
-      description: `"Though a shadow of my formal self, I still can sling it."`,
+      description: "Though a shadow of my formal self, there is still remnants of athleticism.",
       pic: sport,
     },
     {
       id: 2,
       title: "Apprentice Chef to Youtube",
-      description: `"Whether it's Mexican, Asian, Indian, or Italian, I've found a peace in the kitchen."`,
+      description: "Whether it's Mexican, Asian, Indian, or Italian, I've found a peace in the kitchen.",
       pic: chef,
     },
     {
       id: 3,
       title: "Pensive Musician",
-      description: `"A seasoned guitarist and aspiring piansist, this is an excellent creative outlet."`,
+      description: "A seasoned guitarist and aspiring piansist.",
       pic: music,
     },
     {
       id: 4,
       title: "Unkempt gamer and Cinephile",
-      description: "A fan of Lord of the Rings and Tarantino movies, as well as an eager patron to Starfield's release.",
+      description: "When I'm not rewatching The Lord of the Rings or Tarantino movies, I'm smithing knives in Skyrim.",
       pic: gamer,
     },
     {
       id: 5,
       title: "Budding Gardener",
-      description: "I'm new to gardening but it runs deep in my veins with my family history.",
+      description: "I'm new to gardening, but my family tree is full of assiduous gardeners.",
       pic: gardener,
     },
     {
       id: 6,
       title: "Literature",
-      description: "I've found a passion for classic literature and history.",
+      description: "I've found an enjoyment for classic literature and history.",
       pic: lit,
     },
     {
@@ -128,7 +128,7 @@ const Hobbies = () => {
           </div>
           <div className="hobbiesCards-container">
             <div className={
-            currentSlide > 0 ? "slider-button-left" : "slide-arrow-non"
+            currentSlide > 0 ? "slider-button-left" : "slider-button-left-non"
           }>
               <button
                 className="slide-arrow"
@@ -219,7 +219,7 @@ const Hobbies = () => {
             <div className={
             currentSlide < slides.length - 1
               ? "slider-button-right"
-              : "slide-arrow-non"
+              : "slider-button-right-non"
           }>
               <button
                 className="slide-arrow"

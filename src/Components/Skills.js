@@ -230,7 +230,7 @@ export default function Skills() {
       <div className="skills-content">
         <div
           className={
-            currentSlide > 0 ? "slider-button-left" : "slide-arrow-non"
+            currentSlide > 0 ? "slider-button-left" : "slider-button-left-non"
           }
         >
           <button
@@ -270,9 +270,13 @@ export default function Skills() {
             }}
           >
             <h6>{slides[leftSlide].value}</h6>
+            <hr className='card-divider-sides' />
+
           </div>
           <div className="skillCard">
             <h4>{slides[currentSlide].value}</h4>
+            <hr className='card-divider' />
+
           </div>
           <div
             className={
@@ -286,6 +290,8 @@ export default function Skills() {
             }}
           >
             <h6>{slides[rightSlide].value}</h6>
+            <hr className='card-divider-sides' />
+
           </div>
           {/* {deckRightCount > 1 && (
             <div
@@ -303,7 +309,7 @@ export default function Skills() {
           className={
             currentSlide < slides.length - 1
               ? "slider-button-right"
-              : "slide-arrow-non"
+              : "slider-button-right-non"
           }
         >
           <button

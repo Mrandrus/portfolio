@@ -44,6 +44,9 @@ const Stars = () => {
       starTwo.push(new starsTwo());
     }
 
+    $("div.box:odd").fadeIn(3000).fadeOut(3000).fadeIn(3000)
+
+
     //Hover function to remove star from window
     // $(".box").hover(function () {
     //   $(this).css("background-color", "aqua");
@@ -60,7 +63,7 @@ const Stars = () => {
     //Blink stars function
     //$(document).ready(function() {
       //$(".box:first").append(function(){
-        $("div.box:odd").fadeIn(3000).fadeOut(3000).fadeIn(3000)
+        // $("div.box:odd").fadeIn(3000).fadeOut(3000).fadeIn(3000)
         //$(this).next()
         //$(this).fadeIn(3000).fadeOut(3000).fadeIn(3000)
 

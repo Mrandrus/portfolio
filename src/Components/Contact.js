@@ -22,7 +22,10 @@ export default function Contact() {
                     </input>
                 </form>
                 <button>send</button>
-            </div> */}
+            </div> 
+            
+            Tessssst
+            */}
         </div>
     );
 }

@@ -101,6 +101,17 @@ const Starrrs = () => {
             setStarCount(50)
         }
       }
+
+      //Figure out best way to cycle through different star objects
+      //use setTimeout and 
+      const blinkingStars = () => {
+        while (window.open) {
+          starsTwo.forEach(element => {
+            setTimeout(5000)
+            
+          });
+        }
+      }
     
       return (
         <>

@@ -40,9 +40,11 @@ export default function About() {
   return (
     <div className="parentAbout" id="about">
       <div className="aboutName">
-        <h1>
-          Hello, <br /> welcome to my website
-        </h1>
+        <div className="aboutName-items">
+          <h1>
+            Hello, <br /> welcome to my website
+          </h1>
+        </div>
       </div>
       <div className="aboutPicture">
         <div className="aboutPicBorder">

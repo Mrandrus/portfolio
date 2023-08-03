@@ -35,7 +35,7 @@ const Hobbies = () => {
     {
       id: 3,
       title: "Pensive Musician",
-      description: "A seasoned guitarist and aspiring piansist.",
+      description: "A seasoned guitarist and aspiring pianist.",
       pic: music,
     },
     {
@@ -52,8 +52,8 @@ const Hobbies = () => {
     },
     {
       id: 6,
-      title: "Literature",
-      description: "I've found an enjoyment for classic literature and history.",
+      title: "Literary Enthusiast",
+      description: "I've found a new enjoyment for classic literature and history.",
       pic: lit,
     },
     {

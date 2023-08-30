@@ -155,6 +155,13 @@ body {
   z-index: 1;
 }
 
+.aboutName-items {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+}
+
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
@@ -487,7 +494,6 @@ body {
 
 .csuLocation-card-container {
   order: 1;
-  padding: 20px;
   text-align: center;
   justify-content: center;
   display: flex;
@@ -503,19 +509,29 @@ body {
   text-align: center;
   justify-content: center;
   align-self: center;
-  display: flex;
   flex-direction: column;
   z-index: 1;
   transition: 1s ease-in-out;
+}
+
+.csuLocaton-card-border {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
 }
 
 .csuLocation-card-upperContent {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 10%;
+  height: 20%;
   text-align: center;
   justify-content: center;
+  order: 1;
 }
 
 .csuLocation-card-upperContent-one {
@@ -544,9 +560,18 @@ body {
 }
 
 .csuLocation-card-lowerContent {
+  order: 3;
   font-size: 12px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.csuLocation-card-lowerContent-text {
   width: 95%;
-  height: 10%;
+  justify-content: center;
+  text-align: center;
   align-self: center;
 }
 
@@ -584,13 +609,15 @@ body {
 }
 
 .csuImage-section {
-  width: 90%;
-  height: 65%;
-  padding: 5px;
+  width: 95%;
+  height: 60%;
   border-radius: 25px;
+  display: flex;
   align-self: center;
   justify-content: center;
-  display: flex;
+  text-align: center;
+  padding: 5px;
+  order: 2;
 }
 
 .csuImage-section-border {
@@ -599,7 +626,6 @@ body {
   padding: 5px;
   justify-content: center;
   align-self: center;
-  display: flex;
 }
 
 .csuImage {
@@ -614,11 +640,18 @@ body {
   order: 2;
   text-align: center;
   align-self: center;
+  justify-content: center;
+  display: flex;
   z-index: 1;
 }
 
 .experienceText {
   color:#FFE81F;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
 }
 
 /* Skills and Skills Canvas Section Styling */
@@ -1309,6 +1342,32 @@ body {
     flex-direction: column;
   }
 
+  .csuImage-section {
+    width: 90%;
+    height: 55%;
+    padding: 5px;
+    border-radius: 25px;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .csuLocation-card-lowerContent {
+    font-size: 11px;
+  }
+
+  .csuImage-section-border {
+    display: flex;
+    height: 90%;
+    width: 95%;
+  }
+
+  .csuImage {
+    object-fit: cover;
+    justify-content: center;
+    align-self: center;
+  }
+
   .skillCard-post {
     display: none;
   }
@@ -1334,6 +1393,11 @@ body {
   .footer {
     flex-direction: column;
     height: 100vh;
+  }
+
+  .slide-arrow {
+    width: 3rem;
+    font-size: 6rem;
   }
 }
 
@@ -1366,6 +1430,8 @@ body {
     .csuLocation-card {
       width: 24.61rem;
       height: 17.58rem;
+      padding: 0px;
+      margin: 0;
     }
 
     .csuLocation-card-upperContent {

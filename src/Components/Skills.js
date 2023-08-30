@@ -91,8 +91,7 @@ function reverse(str) {
 
 export default function Skills() {
   const slides = [
-    { id: 1, value: "HTML", experience: "6+ years"},
-    { id: 2, value: "CSS", experience: "6+ years" },
+    { id: 1, value: "HTML & CSS", experience: "6+ years"},
     { id: 3, value: "JavaScript", experience: "4+ years" },
     { id: 4, value: "WordPress", experience: "6+ years" },
     { id: 5, value: "React", experience: "3+ years" },
@@ -271,12 +270,12 @@ export default function Skills() {
           >
             <h6>{slides[leftSlide].value}</h6>
             <hr className='card-divider-sides' />
-            <p>{slides[leftSlide].experience}</p>
+            <h6>{slides[leftSlide].experience}</h6>
           </div>
           <div className="skillCard">
             <h4>{slides[currentSlide].value}</h4>
             <hr className='card-divider' />
-            {slides[currentSlide].experience}
+            <h4>{slides[currentSlide].experience}</h4>
           </div>
           <div
             className={
@@ -291,7 +290,7 @@ export default function Skills() {
           >
             <h6>{slides[rightSlide].value}</h6>
             <hr className='card-divider-sides' />
-            {slides[rightSlide].experience}
+            <h6>{slides[rightSlide].experience}</h6>
           </div>
           {/* {deckRightCount > 1 && (
             <div

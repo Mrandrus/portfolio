@@ -91,17 +91,17 @@ function reverse(str) {
 
 export default function Skills() {
   const slides = [
-    { id: 1, value: "HTML" },
-    { id: 2, value: "CSS" },
-    { id: 3, value: "JavaScript" },
-    { id: 4, value: "WordPress" },
-    { id: 5, value: "React" },
-    { id: 6, value: "JQuery" },
-    { id: 7, value: "C#" },
-    { id: 8, value: "Selenium" },
-    { id: 9, value: "SQL" },
-    { id: 10, value: "MySQL" },
-    { id: 11, value: "Adobe Suite" },
+    { id: 1, value: "HTML", experience: "6+ years"},
+    { id: 2, value: "CSS", experience: "6+ years" },
+    { id: 3, value: "JavaScript", experience: "4+ years" },
+    { id: 4, value: "WordPress", experience: "6+ years" },
+    { id: 5, value: "React", experience: "3+ years" },
+    { id: 6, value: "JQuery", experience: "1+ years" },
+    { id: 7, value: "C#", experience: "2+ years" },
+    { id: 8, value: "Selenium", experience: "2+ years" },
+    { id: 9, value: "SQL", experience: "1+ years" },
+    { id: 10, value: "MySQL", experience: "1+ years" },
+    { id: 11, value: "Adobe Suite", experience: "7+ years" },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -271,12 +271,12 @@ export default function Skills() {
           >
             <h6>{slides[leftSlide].value}</h6>
             <hr className='card-divider-sides' />
-
+            <p>{slides[leftSlide].experience}</p>
           </div>
           <div className="skillCard">
             <h4>{slides[currentSlide].value}</h4>
             <hr className='card-divider' />
-
+            {slides[currentSlide].experience}
           </div>
           <div
             className={
@@ -291,7 +291,7 @@ export default function Skills() {
           >
             <h6>{slides[rightSlide].value}</h6>
             <hr className='card-divider-sides' />
-
+            {slides[rightSlide].experience}
           </div>
           {/* {deckRightCount > 1 && (
             <div

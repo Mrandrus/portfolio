@@ -9,9 +9,9 @@ import Experience from "./Components/Experience";
 import Projects from "./Components/Projects";
 import Hobbies from "./Components/Hobbies";
 //import { Component } from "react/cjs/react.production.min";
-import { BrowserRouter } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
-import $ from "jquery"
+import { BrowserRouter } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+import $ from "jquery";
 import Stars from "./Components/Stars";
 import Starrrs from "./Components/Starrrs";
 import MouseTrail from "./Components/MouseTrail";
@@ -52,14 +52,15 @@ function App() {
 
   let c = banana(array);
 
-
   return (
     <main>
       {/* <Swiping /> */}
-      <Starrrs />
-      <MouseTrail />
-      <About /> 
-      <Experience />      
+      <div className="container-for-stars">
+        <Starrrs />
+      </div>
+      {window.innerWidth > 950 ? <MouseTrail /> : ""}
+      <About />
+      <Experience />
       <Skills />
       <Projects />
       <Hobbies />

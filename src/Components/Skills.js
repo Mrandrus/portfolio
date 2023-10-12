@@ -17,8 +17,7 @@ const extraContent = (
 
 export default function Skills() {
   const slides = [
-    { id: 1, value: "HTML", experience: "6+ years"},
-    { id: 2, value: "CSS", experience: "6+ years" },
+    { id: 1, value: "HTML & CSS", experience: "6+ years"},
     { id: 3, value: "JavaScript", experience: "4+ years" },
     { id: 4, value: "WordPress", experience: "6+ years" },
     { id: 5, value: "React", experience: "3+ years" },

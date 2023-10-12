@@ -9,27 +9,25 @@ import gardener from "../media/matt_gardener.jpg";
 import lit from "../media/matt_literature.jpg";
 import amazon from "../media/amazon_matt.jpg";
 
-
-
-
-
 const Hobbies = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [leftSlide, setLeftSlide] = useState(0);
   const [rightSlide, setRightSlide] = useState(1);
-  const [cards, setCards] = useState([]);
+  const [card, setCard] = useState([]);
 
   const slides = [
     {
       id: 1,
       title: "Aged Intramural Athlete",
-      description: "Though a shadow of my formal self, there is still remnants of athleticism.",
+      description:
+        "Though a shadow of my formal self, there are still remnants of athleticism.",
       pic: sport,
     },
     {
       id: 2,
       title: "Apprentice Chef to Youtube",
-      description: "Whether it's Mexican, Asian, Indian, or Italian, I've found a peace in the kitchen.",
+      description:
+        "Whether it's Mexican, Asian, Indian, or Italian, I've found a peace in the kitchen.",
       pic: chef,
     },
     {
@@ -41,19 +39,22 @@ const Hobbies = () => {
     {
       id: 4,
       title: "Unkempt gamer and Cinephile",
-      description: "When I'm not rewatching The Lord of the Rings or Tarantino movies, I'm smithing knives in Skyrim.",
+      description:
+        "When I'm not rewatching The Lord of the Rings or Tarantino movies, I'm smithing knives in Skyrim.",
       pic: gamer,
     },
     {
       id: 5,
       title: "Budding Gardener",
-      description: "I'm new to gardening, but my family tree is full of assiduous gardeners.",
+      description:
+        "I'm new to gardening, but my family tree is full of assiduous gardeners.",
       pic: gardener,
     },
     {
       id: 6,
       title: "Literary Enthusiast",
-      description: "I've found a new enjoyment for classic literature and history.",
+      description:
+        "I've found a new enjoyment for classic literature and history.",
       pic: lit,
     },
     {
@@ -64,42 +65,37 @@ const Hobbies = () => {
     },
   ];
 
+  const loadCards = async () => {
+    const promises = slides.map(async (card) => {
+      const image = new Image();
+      image.src = card.pic;
+      await image.decode();
+      return { ...card, image };
+    });
+
+    const loadedCards = await Promise.all(promises);
+    setCard(loadedCards);
+  };
+
   useEffect(() => {
-    const loadCards = async () => {
-      const promises = slides.map(async (card) => {
-        const image = new Image();
-        image.src = card.pic;
-        await image.decode();
-        return { ...card, image };
-      });
-
-      const loadedCards = await Promise.all(promises);
-      setCards(loadedCards);
-    };
-
     loadCards();
-  }, []);
+  }, [slides]);
 
   const traverseRight = () => {
     if (currentSlide >= slides.length - 1 || rightSlide >= slides.length - 1) {
       setCurrentSlide(slides.length - 1);
       setLeftSlide(slides.length - 2);
       setRightSlide(slides.length - 1);
-      //setDeckLeft([0])
     } else {
       setCurrentSlide(currentSlide + 1);
       setRightSlide(rightSlide + 1);
       if (leftSlide <= slides.length - 1 && currentSlide >= 1) {
         setLeftSlide(leftSlide + 1);
       }
-      //setDeckLeft(deckLeft.push(1))
-      //console.log("left deck number", deckLeft)
     }
   };
 
   const traverseLeft = () => {
-    //let updateSlides = deckRight
-
     if (currentSlide <= 0) {
       setCurrentSlide(0);
       setLeftSlide(0);
@@ -112,11 +108,7 @@ const Hobbies = () => {
       if (currentSlide < slides.length - 1) {
         setRightSlide(rightSlide - 1);
       }
-      // if (leftSlide >= slides.length - 2) {
-      //   setLeftSlide(slides.length - 2)
-      // }
     }
-    //console.log(currentSlide)
   };
 
   return (
@@ -127,9 +119,13 @@ const Hobbies = () => {
             <h2>A little more about me</h2>
           </div>
           <div className="hobbiesCards-container">
-            <div className={
-            currentSlide > 0 ? "slider-button-left" : "slider-button-left-non"
-          }>
+            <div
+              className={
+                currentSlide > 0
+                  ? "slider-button-left"
+                  : "slider-button-left-non"
+              }
+            >
               <button
                 className="slide-arrow"
                 id="slide-arrow-prev"
@@ -161,7 +157,10 @@ const Hobbies = () => {
                   currentSlide >= 1 ? "hobbiesCard-left" : "skillCard-pre-non"
                 }
               >
-                <div className="hobbiesCard-left" onClick={() => traverseLeft()}>
+                <div
+                  className="hobbiesCard-left"
+                  onClick={() => traverseLeft()}
+                >
                   <div className="hobbiesCard-left-border">
                     <div className="hobbiesCard-left-upper">
                       <div className="hobbiesCard-left-upper-sectionOne">
@@ -199,7 +198,10 @@ const Hobbies = () => {
                     : "skillCard-post-non"
                 }
               >
-                <div className="hobbiesCard-right" onClick={() => traverseRight()}>
+                <div
+                  className="hobbiesCard-right"
+                  onClick={() => traverseRight()}
+                >
                   <div className="hobbiesCard-right-border">
                     <div className="hobbiesCard-right-upper">
                       <div className="hobbiesCard-right-upper-sectionOne">
@@ -216,11 +218,13 @@ const Hobbies = () => {
                 </div>
               </div>
             </div>
-            <div className={
-            currentSlide < slides.length - 1
-              ? "slider-button-right"
-              : "slider-button-right-non"
-          }>
+            <div
+              className={
+                currentSlide < slides.length - 1
+                  ? "slider-button-right"
+                  : "slider-button-right-non"
+              }
+            >
               <button
                 className="slide-arrow"
                 id="slide-arrow-next"

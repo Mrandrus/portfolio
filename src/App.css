@@ -418,10 +418,30 @@ body {
 }
 
 .projects-heading {
-  height: 10%;
   text-align: center;
+  width: 100%;
+  height: 15%;
   justify-content: center;
   align-items: center;
+  order: 1;
+}
+
+.project-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCards-container {
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  z-index: 1;
+  display: flex; 
+  flex-direction: row; 
+  color:#FFE81F;
+  height: 75%;
+  order: 2;
 }
 
 .projectItems {
@@ -431,6 +451,20 @@ body {
   align-items: center;
   justify-content: center;
   height: 70%;
+  order: 2;
+}
+
+.projectCards {
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  z-index: 1;
+  display: flex; 
+  flex-direction: row; 
+  color:#FFE81F;
+  order: 3;
+  height: 100%;
+  gap: 15px;
 }
 
 .projectCard {
@@ -445,33 +479,225 @@ body {
   align-self: center;
   display: flex;
   flex-direction: column;
-  z-index: 2;
-  transition: 1s ease-in-out;
-}
-
-.project-coming-soon {
-  font-size: 100px;
   z-index: 3;
+  transition: 1s ease-in-out;
+  order: 2;
 }
 
-/* .projectCard:hover {
+.projectCard:hover {
   box-shadow: 0px 0px 50px 7px #ffffff;
-} */
-
-.projectItems {
-  padding: 20px;
+  transition: 1s;
 }
 
-.projectOne {
-  padding: 20px;
+.projectCard-border {
+  height: 100%;
+  width: 90%;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
 }
 
-.projectTwo {
-  padding: 20px;
+.projectCard-upper {
+  height: 80%;
 }
 
-.projectThree {
-  padding: 20px;
+.projectCard-upper-sectionOne {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.projectCard-upper-sectionOne h4 {
+  margin: 0px;
+  justify-content: center;
+  align-self: center;
+}
+
+.projectCard-upper-sectionTwo {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+}
+
+.projectCard-upper-sectionTwo img {
+  width: 90%;
+  height: 90%;
+  object-fit:fill;
+  justify-content: center;
+  align-self: center;
+  object-position: 15% 10%;
+  border-radius: 15px;
+}
+
+.projectCard-bottom {
+  height: 20%;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+
+.projectCard-left {
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
+  height: 16.407rem;
+  width: 11.719rem;
+  border: #064663;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  transition: 1s ease-in-out;
+  order: 2;
+}
+
+.projectCard-left-border {
+  height: 100%;
+  width: 90%;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+
+.projectCard-left:hover {
+  box-shadow: 0px 0px 50px 7px #ffffff;
+  transition: 1s;
+}
+
+.projectCard-left-upper {
+  height: 80%;
+  align-self: center;
+  justify-content: center;
+}
+
+.projectCard-left-upper-sectionOne {
+  font-size: .6rem;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.projectCard-left-upper-sectionOne h4 {
+  margin: 0px;
+  justify-content: center;
+  align-self: center;
+}
+
+.projectCard-left-upper-sectionTwo {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+}
+
+.projectCard-left-upper-sectionTwo img {
+  width: 90%;
+  height: 90%;
+  object-fit: fill;
+  justify-content: center;
+  align-self: center;
+  object-position: 15% 10%;
+  border-radius: 15px;
+}
+
+.projectCard-left-bottom {
+  height: 20%;
+  font-size: .5rem;
+  justify-content: center;
+  align-self: center;
+}
+
+.projectCard-right {
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(6,70,99,1) 0%, rgba(0,0,0,1) 100%);  
+  height: 16.407rem;
+  width: 11.719rem;
+  border: #064663;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  transition: 1s ease-in-out;
+  order: 2;
+}
+
+.projectCard-right:hover {
+  box-shadow: 0px 0px 50px 7px #ffffff;
+  transition: 1s;
+}
+
+.projectCard-right-border {
+  height: 100%;
+  width: 90%;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+
+.projectCard-right-upper {
+  height: 80%;
+  align-self: center;
+  justify-content: center;
+}
+
+.projectCard-right-upper-sectionOne {
+  height: 10%;
+  font-size: .6rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.projectCard-right-upper-sectionOne h4 {
+  margin: 0px;
+  justify-content: center;
+  align-self: center;
+}
+
+.projectCard-right-upper-sectionTwo {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+}
+
+.projectCard-right-upper-sectionTwo img {
+  width: 90%;
+  height: 95%;
+  object-fit: fill;
+  justify-content: center;
+  align-self: center;
+  object-position: 15% 10%;
+  border-radius: 15px;
+}
+
+.projectCard-right-bottom {
+  height: 20%;
+  font-size: .5rem;
+  justify-content: center;
+  align-self: center;
+}
+
+.projectCard-link {
+  text-decoration: none;
+  color:#FFE81F;
 }
 
 /* Experience Section Styling */

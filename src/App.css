@@ -1610,6 +1610,14 @@ body {
     display: none;
   }
 
+  .projectCard-right {
+    display: none;
+  }
+
+  .projectCard-left {
+    display: none;
+  }
+
   .footer-items-left {
     flex-direction: column;
     height: 100vh;
@@ -1666,6 +1674,10 @@ body {
 
     .aboutPicture {
       font-size: small;
+    }
+
+    .projectCard-upper {
+      height: 70%;
     }
   }
 

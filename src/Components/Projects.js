@@ -14,7 +14,7 @@ export default function Projects() {
       id: 1,
       site: "Colorado Nom-Noms",
       description:
-        "A site dedicated to providing a road map for Colorado's best restaurants.  Also I'll post some of my favorite recipes.",
+        "A site dedicated to Colorado's best restaurants, and some of my favorite recipes. Built in react, utilizing the Mapbox api for the food map.",
       pic: nomsLogo,
       link: "https://coloradonomnoms.com/",
     },
@@ -96,24 +96,24 @@ export default function Projects() {
               currentSlide >= 1 ? "projectCard-left" : "skillCard-pre-non"
             }
           >
-              <div className="projectCard-left" onClick={() => traverseLeft()}>
-                <div className="projectCard-left-border">
-                  <div className="projectCard-left-upper">
-                    <div className="projectCard-left-upper-sectionOne">
-                      <h4>{slides[leftSlide].site}</h4>
-                    </div>
-                    <div className="projectCard-left-upper-sectionTwo">
-                      <img
-                        src={slides[leftSlide].pic}
-                        alt={slides[leftSlide].site}
-                      />
-                    </div>
+            <div className="projectCard-left" onClick={() => traverseLeft()}>
+              <div className="projectCard-left-border">
+                <div className="projectCard-left-upper">
+                  <div className="projectCard-left-upper-sectionOne">
+                    <h4>{slides[leftSlide].site}</h4>
                   </div>
-                  <div className="projectCard-left-bottom">
-                    <p>{slides[leftSlide].description}</p>
+                  <div className="projectCard-left-upper-sectionTwo">
+                    <img
+                      src={slides[leftSlide].pic}
+                      alt={slides[leftSlide].site}
+                    />
                   </div>
                 </div>
+                <div className="projectCard-left-bottom">
+                  <p>{slides[leftSlide].description}</p>
+                </div>
               </div>
+            </div>
           </div>
           <div className="projectCard">
             <div className="projectCard-border">
@@ -143,27 +143,24 @@ export default function Projects() {
                 : "skillCard-post-non"
             }
           >
-              <div
-                className="projectCard-right"
-                onClick={() => traverseRight()}
-              >
-                <div className="projectCard-right-border">
-                  <div className="projectCard-right-upper">
-                    <div className="projectCard-right-upper-sectionOne">
-                      <h4>{slides[rightSlide].site}</h4>
-                    </div>
-                    <div className="projectCard-right-upper-sectionTwo">
-                      <img
-                        src={slides[rightSlide].pic}
-                        alt={slides[rightSlide].site}
-                      />
-                    </div>
+            <div className="projectCard-right" onClick={() => traverseRight()}>
+              <div className="projectCard-right-border">
+                <div className="projectCard-right-upper">
+                  <div className="projectCard-right-upper-sectionOne">
+                    <h4>{slides[rightSlide].site}</h4>
                   </div>
-                  <div className="projectCard-right-bottom">
-                    <p>{slides[rightSlide].description}</p>
+                  <div className="projectCard-right-upper-sectionTwo">
+                    <img
+                      src={slides[rightSlide].pic}
+                      alt={slides[rightSlide].site}
+                    />
                   </div>
                 </div>
+                <div className="projectCard-right-bottom">
+                  <p>{slides[rightSlide].description}</p>
+                </div>
               </div>
+            </div>
           </div>
         </div>
         <div

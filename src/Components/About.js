@@ -54,12 +54,12 @@ export default function About() {
                 <p>Matt Andrus</p>
               </div>
               <div className="aboutPicUpper_sectionOne_Two">
-                <p>מַתִּתְיָהוּ‎</p>
+                <p>マシュー‎</p>
               </div>
             </div>
             <div className="aboutPicUpper_sectionTwo">
               <p>
-                Colorado native with six years of experience working with a
+                Colorado native with six years of developer experience working with a
                 variety of different languages and frameworks.
               </p>
             </div>

@@ -77,7 +77,7 @@ const Starrrs = () => {
       setStars(updatedStars);
       setStarsTwo(updatedStarsTwo);
 
-    }, 300);
+    }, 5);
 
     adjustStars(window.innerWidth);
     createStars();
@@ -94,15 +94,15 @@ const Starrrs = () => {
 
   const adjustStars = (size) => {
     if (size > 2000) {
-      setStarCount(250);
+      setStarCount(20);
     } else if (size > 1500 && size < 2000) {
-      setStarCount(175);
+      setStarCount(10);
     } else if (size > 1000 && size < 1500) {
-      setStarCount(150);
+      setStarCount(7);
     } else if (size > 500 && size < 1000) {
-      setStarCount(100);
+      setStarCount(4);
     } else {
-      setStarCount(50);
+      setStarCount(20);
     }
   };
 

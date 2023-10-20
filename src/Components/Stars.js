@@ -39,7 +39,7 @@ const Stars = () => {
 
     let star = [];
     let starTwo = [];
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 10; i++) {
       star.push(new stars());
       starTwo.push(new starsTwo());
     }

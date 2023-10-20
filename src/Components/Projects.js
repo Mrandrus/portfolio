@@ -14,7 +14,7 @@ export default function Projects() {
       id: 1,
       site: "Colorado Nom-Noms",
       description:
-        "A site dedicated to Colorado's best restaurants, and some of my favorite recipes. Built in react, utilizing the Mapbox api for the food map.",
+        "A site dedicated to Colorado's best restaurants, and some of my favorite recipes. Built in react, utilizing the Mapbox api and React Router.",
       pic: nomsLogo,
       link: "https://coloradonomnoms.com/",
     },

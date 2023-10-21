@@ -27,13 +27,15 @@ function App() {
       {/* <div className="container-for-mousetrail">
         {window.innerWidth > 950 ? <MouseTrail /> : ""}
       </div> */}
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Hobbies />
-      <Contact />
-      <Footer />
+      <div className="main-container">
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Hobbies />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 }

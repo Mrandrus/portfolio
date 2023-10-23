@@ -17,7 +17,7 @@ html, body, main, section, div#root, div.app, #app, #app>div {
   margin: 0px;
   padding: 0px;
   background-image: url('./media/starry_background.png'); 
-  background-size: cover;
+  background-size:cover;
   background-attachment: fixed;
 }
 
@@ -44,18 +44,18 @@ body {
 .main-container {
   background-image: url('./media/clouds.png');
   background-position: 0;
-  background-size: contain;
+  background-size:cover;
   background-attachment: fixed;
-  animation: wind 20s linear infinite;
+  animation: wind 250s linear infinite;
   height: max-content;
 }
 
 @keyframes wind {
   0% {
-    background-position: 0 300vmin;
+    background-position: 0vmin;
   }
   100% {
-    background-position: 385vmin;
+    background-position: 1000vmin;
   } 
 }
 

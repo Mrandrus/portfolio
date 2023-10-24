@@ -12,30 +12,6 @@ const getTime = Date.now();
 const today = new Date(getTime);
 
 export default function About() {
-  var shitOn = function () {
-    let str = "Shit on bro";
-    document.getElementById("shit").innerHTML = str;
-  };
-
-  // $(document).ready(function(){
-  //   function stars() {
-  //     this.obj = document.createElement("div")
-  //     this.obj.classList.add("box");
-
-  //     this.obj.style.top = (window.innerHeight * Math.random()) + 'px';
-  //     this.obj.style.left = (window.innerWidth * Math.random()) + 'px';
-  //     this.size = Math.floor(9 * Math.random()) + 2;
-  //     this.obj.style.height =  this.size + 'px';
-  //     this.obj.style.width = this.size + 'px';
-
-  //     document.body.appendChild(this.obj);
-  //   }
-
-  //   let star = []
-  //   for (let i = 0; i < 100; i++) {
-  //     star.push(new stars())
-  //   }
-  // })
 
   return (
     <div className="parentAbout" id="about">
@@ -66,12 +42,6 @@ export default function About() {
             <div className="aboutPicUpper_sectionThree">
               <img src={pic} alt="muhFace" />
             </div>
-
-            {/* <p>peen</p>
-              <p>I say {statement}</p>
-              <p>{today.toDateString()}</p>
-              <button onClick={shitOn}>Click this</button>
-              <p id="shit"></p> */}
           </div>
           <div className="aboutPicLower">
             <div className="aboutPicLower_sectionOne">

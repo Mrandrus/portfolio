@@ -18,21 +18,24 @@ import MouseTrail from "./Components/MouseTrail";
 import Swiping from "./Components/Swiping";
 
 function App() {
-  
   return (
     <main>
       {/* <Swiping /> */}
       <div className="container-for-stars">
         <Starrrs />
       </div>
-      {window.innerWidth > 950 ? <MouseTrail /> : ""}
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Hobbies />
-      <Contact />
-      <Footer />
+      {/* <div className="container-for-mousetrail">
+        {window.innerWidth > 950 ? <MouseTrail /> : ""}
+      </div> */}
+      <div className="main-container">
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Hobbies />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 }

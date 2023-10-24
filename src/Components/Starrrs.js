@@ -16,7 +16,7 @@ const Starrrs = () => {
 
   const [stars, setStars] = useState([]);
   const [starsTwo, setStarsTwo] = useState([]);
-  const [starCount, setStarCount] = useState(50);
+  const [starCount, setStarCount] = useState(0);
 
   useEffect(() => {
 
@@ -25,10 +25,10 @@ const Starrrs = () => {
       const starTwoElements = [];
 
       for (let i = 0; i < starCount; i++) {
-        const star = new Star("box");
+        const star = new Star("starz");
         starElements.push(star);
 
-        const starTwo = new Star("boxTwo");
+        const starTwo = new Star("starzTwo");
         starTwoElements.push(starTwo);
       }
 
@@ -77,7 +77,7 @@ const Starrrs = () => {
       setStars(updatedStars);
       setStarsTwo(updatedStarsTwo);
 
-    }, 300);
+    }, 5);
 
     adjustStars(window.innerWidth);
     createStars();
@@ -94,15 +94,15 @@ const Starrrs = () => {
 
   const adjustStars = (size) => {
     if (size > 2000) {
-      setStarCount(250);
+      setStarCount(20);
     } else if (size > 1500 && size < 2000) {
-      setStarCount(175);
+      setStarCount(10);
     } else if (size > 1000 && size < 1500) {
-      setStarCount(150);
+      setStarCount(7);
     } else if (size > 500 && size < 1000) {
-      setStarCount(100);
+      setStarCount(4);
     } else {
-      setStarCount(50);
+      setStarCount(20);
     }
   };
 

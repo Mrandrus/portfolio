@@ -7,7 +7,7 @@
 
 .App {
   text-align: center;
-  background-image: url('./media/clouds.png'); 
+  background-image: url('./media/clouds.2.png'); 
   background-size: cover;
   background-attachment: fixed;
 }
@@ -52,10 +52,10 @@ body {
 
 @keyframes wind {
   0% {
-    background-position: 0vmin;
+    background-position: 0 300vmin;
   }
   100% {
-    background-position: 1000vmin;
+    background-position: 800vmin;
   } 
 }
 
@@ -384,78 +384,55 @@ body {
   justify-content: center;
   align-self: center;}
 
-.box {
-  background-color: #fff;
+.starz {
+  background-color: #baccff;
   box-shadow: 0px 0px 25px 5px #fff;
   position: fixed;
   border-radius: 50%;
   z-index: 0;
 }
 
-.testBox {
-  background-color: #fff;
-  box-shadow: 0px 0px 25px 5px red;
-  position: fixed;
-  border-radius: 50%;
-  z-index: 1;
-  height: 15px;
+/* .starz:nth-child(2) {
+  animation: blink 10s infinite;
 }
 
- /* .box:hover {
-  box-shadow: 0px 0px 10px 5px aqua;
+.starz:nth-child(1) {
+  animation: blink 20s infinite;
+  animation-delay: 10s;
 }
 
-.boxTwo:hover {
-  box-shadow: 0px 0px 10px 5px aqua;
-}  */
 
-.boxTwo {
-  background-color: #fff;
-  box-shadow: 0px 0px 50px 7px #ffffff;
-  position: fixed;
-  border-radius: 50%;
-  z-index: 0;
+.starzTwo:nth-child(2) {
+  animation: blink 7s infinite;
 }
 
-.boxHover {
-  background-color: #fff;
-  box-shadow: 0px 0px 50px 7px aqua;
-  position: fixed;
-  border-radius: 50%;
-  z-index: 0;
+.starzTwo:nth-child(1) {
+  animation: blink 15s infinite;
+  animation-delay: 3s;
 }
 
-/* .boxTwo:nth-child(46) {
-  background-color: #fff;
-  box-shadow: 0px 0px 50px 7px #ffffff;
-  position: fixed;
-  border-radius: 50%;
-  z-index: 0;
-  animation: twinkle 15s infinite;
-}
-
-.boxTwo:nth-child(28) {
-  background-color: #fff;
-  box-shadow: 0px 0px 50px 7px #ffffff;
-  position: fixed;
-  border-radius: 50%;
-  z-index: 0;
-  animation: twinkleTwo 15s infinite;
-}
-
-@keyframes twinkle {
-  50% {
-    box-shadow: 0px 0px 30px 7px aqua;
-
+@keyframes blink {
+  0% {
+    opacity: 90%;
   }
-}
-
-@keyframes twinkleTwo {
-  10% {
-    box-shadow: 0px 0px 30px 20px aqua;
-
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 90%;
   }
 } */
+
+
+.starzTwo {
+  background-color: #ffd7ae;
+  opacity: 50%;
+  box-shadow: 0px 0px 25px 10px #ffffff;
+  position: fixed;
+  border-radius: 50%;
+  z-index: 0;
+}
+
 
 
 /* Projects Section Styling*/

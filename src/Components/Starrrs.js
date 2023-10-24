@@ -16,7 +16,7 @@ const Starrrs = () => {
 
   const [stars, setStars] = useState([]);
   const [starsTwo, setStarsTwo] = useState([]);
-  const [starCount, setStarCount] = useState(50);
+  const [starCount, setStarCount] = useState(0);
 
   useEffect(() => {
 
@@ -25,10 +25,10 @@ const Starrrs = () => {
       const starTwoElements = [];
 
       for (let i = 0; i < starCount; i++) {
-        const star = new Star("box");
+        const star = new Star("starz");
         starElements.push(star);
 
-        const starTwo = new Star("boxTwo");
+        const starTwo = new Star("starzTwo");
         starTwoElements.push(starTwo);
       }
 

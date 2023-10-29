@@ -16,10 +16,11 @@ const Starrrs = () => {
 
   const [stars, setStars] = useState([]);
   const [starsTwo, setStarsTwo] = useState([]);
-  const [starCount, setStarCount] = useState(0);
+  const [starCount, setStarCount] = useState(20);
+
+  const newWidth = window.innerWidth;
 
   useEffect(() => {
-
     const createStars = () => {
       const starElements = [];
       const starTwoElements = [];
@@ -36,90 +37,82 @@ const Starrrs = () => {
       setStarsTwo(starTwoElements);
     };
 
+    createStars();
+  }, [newWidth]);
+
+  useEffect(() => {
     const handleResize = _.debounce(() => {
-      adjustStars(window.innerWidth);
+      if (newWidth !== window.innerWidth) {
+        adjustStars(window.innerWidth);
 
-      const updatedStars = stars.map((star) => ({
-        ...star,
-        left: Math.random() * window.innerWidth + "px",
-        top: Math.random() * window.innerHeight + "px",
-      }));
+        const updatedStars = stars.map((star) => ({
+          ...star,
+          left: Math.random() * window.innerWidth + "px",
+          top: Math.random() * window.innerHeight + "px",
+        }));
 
-      const updatedStarsTwo = starsTwo.map((star) => ({
-        ...star,
-        left: Math.random() * window.innerWidth + "px",
-        top: Math.random() * window.innerHeight + "px",
-      }));
+        const updatedStarsTwo = starsTwo.map((star) => ({
+          ...star,
+          left: Math.random() * window.innerWidth + "px",
+          top: Math.random() * window.innerHeight + "px",
+        }));
 
-      //   switch(size) {
-      //     case size > 2000:
-      //         setStarCount(200)
-      //         break;
-      //     case size > '1500':
-      //         setStarCount(150)
-      //         break;
-      //     case size > 1000:
-      //         setStarCount(100)
-      //         break;
-      //     case size > 750:
-      //         setStarCount(75)
-      //         break;
-      //     default:
-      //         setStarCount(50)
-      // }
-
+        setStars(updatedStars);
+        setStarsTwo(updatedStarsTwo);
+      }
       console.log(
         "Checking window size",
         window.innerWidth,
         "checking star count:",
         starCount
       );
-      setStars(updatedStars);
-      setStarsTwo(updatedStarsTwo);
-
-    }, 5);
+    }, 300);
 
     adjustStars(window.innerWidth);
-    createStars();
 
+    console.log("count them stars:", starCount);
 
     window.addEventListener("resize", handleResize);
-    console.log("count them stars:", starCount)
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [stars.length, starsTwo.length, starCount]);
+  // }, [stars.length, starsTwo.length, starCount]);
+  }, [newWidth])
+// }, [])
 
 
   const adjustStars = (size) => {
-    if (size > 2000) {
-      setStarCount(20);
-    } else if (size > 1500 && size < 2000) {
-      setStarCount(10);
-    } else if (size > 1000 && size < 1500) {
-      setStarCount(7);
-    } else if (size > 500 && size < 1000) {
-      setStarCount(4);
-    } else {
-      setStarCount(20);
+    const newWidth = window.innerWidth;
+
+    if (newWidth !== size) {
+      if (size > 2000) {
+        setStarCount(20);
+      } else if (size > 1500 && size < 2000) {
+        setStarCount(10);
+      } else if (size > 1000 && size < 1500) {
+        setStarCount(7);
+      } else if (size > 500 && size < 1000) {
+        setStarCount(4);
+      } else {
+        setStarCount(20);
+      }
     }
   };
 
-  //Figure out best way to cycle through different star objects
-  //use setTimeout and
+  //Cycle stars to adjust box shadow, can do the same
+  //with css animate, doesn't look like exactly wha I'm looking for.
   const blinkingStars = () => {
     const updatedStars = stars.map((star) => ({
       ...star,
-      boxShadow: '0px 0px 25px 50px red', // Modify the box shadow here
+      boxShadow: "0px 0px 25px 50px red", // Modify the box shadow here
     }));
 
     const updatedStarsTwo = starsTwo.map((star) => ({
       ...star,
-      boxShadow: '0px 0px 50px 70px red', // Modify the box shadow here
+      boxShadow: "0px 0px 50px 70px red", // Modify the box shadow here
     }));
-  
-  }
+  };
 
   return (
     <>

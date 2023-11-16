@@ -43,9 +43,9 @@ body {
 } */
 
 .main-container {
-  background-image: url('./media/clouds.2.png');
+  background-image: url('./media/clouds.4.png');
   background-position: fixed;
-  background-size:cover;
+  background-size: cover;
   background-attachment: fixed;
   animation: wind 250s linear infinite;
   height: max-content;

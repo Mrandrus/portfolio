@@ -43,9 +43,9 @@ body {
 } */
 
 .main-container {
-  background-image: url('./media/clouds.2.png');
+  background-image: url('./media/clouds.4.png');
   background-position: fixed;
-  background-size:cover;
+  background-size: cover;
   background-attachment: fixed;
   animation: wind 250s linear infinite;
   height: max-content;
@@ -662,7 +662,7 @@ body {
   align-self: center;
   display: flex;
   flex-direction: column;
-  z-index: 3;
+  z-index: 1;
   transition: 1s ease-in-out;
   order: 2;
 }
@@ -1064,7 +1064,7 @@ body {
   display: flex;
   flex-direction: row;
   position: static;
-  z-index: 2;
+  z-index: 1;
   order: 3;
 }
 
@@ -1081,7 +1081,7 @@ body {
   align-self: center;
   display: flex;
   flex-direction: row;
-  z-index: 2;
+  z-index: 1;
   order: 2;
 }
 
@@ -1160,7 +1160,7 @@ body {
   align-self: center;
   display: flex;
   flex-direction: column;
-  z-index: 3;
+  z-index: 1;
   order: 4;
   transition: 1s ease-in-out;
 }
@@ -1440,7 +1440,7 @@ body {
   align-self: center;
   display: flex;
   flex-direction: column;
-  z-index: 3;
+  z-index: 1;
   transition: 1s ease-in-out;
   order: 2;
 }

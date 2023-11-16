@@ -167,7 +167,7 @@ const Hobbies = () => {
                         <h4>{slides[leftSlide].title}</h4>
                       </div>
                       <div className="hobbiesCard-left-upper-sectionTwo">
-                        <img src={slides[leftSlide].pic} />
+                        <img loading="lazy" src={slides[leftSlide].pic} />
                       </div>
                     </div>
                     <div className="hobbiesCard-left-bottom">
@@ -183,7 +183,7 @@ const Hobbies = () => {
                       <h4>{slides[currentSlide].title}</h4>
                     </div>
                     <div className="hobbiesCard-upper-sectionTwo">
-                      <img src={slides[currentSlide].pic} />
+                      <img loading="lazy" src={slides[currentSlide].pic} />
                     </div>
                   </div>
                   <div className="hobbiesCard-bottom">
@@ -208,7 +208,7 @@ const Hobbies = () => {
                         <h4>{slides[rightSlide].title}</h4>
                       </div>
                       <div className="hobbiesCard-right-upper-sectionTwo">
-                        <img src={slides[rightSlide].pic} />
+                        <img loading="lazy" src={slides[rightSlide].pic} />
                       </div>
                     </div>
                     <div className="hobbiesCard-right-bottom">

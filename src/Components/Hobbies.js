@@ -1,13 +1,13 @@
 import "../App.css";
 import { useEffect, useState } from "react";
 import csu from "../media/csu_sign.jpg";
-import chef from "../media/matt_chef.jpg";
-import music from "../media/matt_music_slerp.jpg";
-import sport from "../media/matt_sports.jpg";
-import gamer from "../media/Matt_Gamer.jpg";
-import gardener from "../media/matt_gardener.jpg";
-import lit from "../media/matt_literature.jpg";
-import amazon from "../media/amazon_matt.jpg";
+import chef from "../media/matt_chef_small.jpg";
+import music from "../media/matt_music_slerp_small.jpg";
+import sport from "../media/matt_sports_small.jpg";
+import gamer from "../media/Matt_Gamer_small.jpg";
+import gardener from "../media/matt_gardener_small.jpg";
+import lit from "../media/matt_literature_small.jpg";
+import amazon from "../media/amazon_matt_small.jpg";
 
 const Hobbies = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

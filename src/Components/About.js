@@ -41,7 +41,7 @@ export default function About() {
               </p>
             </div>
             <div className="aboutPicUpper_sectionThree">
-              <img loading="lazy" src={pic} alt="muhFace" />
+              <img loading="lazy" src={pic} alt="profile" />
             </div>
           </div>
           <div className="aboutPicLower">
